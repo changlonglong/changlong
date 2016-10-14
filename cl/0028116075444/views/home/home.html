@@ -1,0 +1,57 @@
+<ion-view title="Home" id="home">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-navicon-round button-positive" menu-toggle></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-android-search button-positive"></button>
+    </ion-nav-buttons>
+    <ion-content class="background1">
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval="2000">
+            <ion-slide><div class="box"><img src="images/banner-1.jpg" alt=""></div></ion-slide>
+            <ion-slide><div class="box"><img src="images/banner-2.png" alt=""></div></ion-slide>
+            <ion-slide><div class="box"><img src="images/banner-3.jpg" alt=""></div></ion-slide>
+            <ion-slide><div class="box"><img src="images/banner-4.jpg" alt=""></div></ion-slide>
+        </ion-slide-box>
+        <div class="row category">
+            <div class="col col-content col-25">
+                <img src="images/electronic.jpg" style="width:90%;border-radius: 50%" ui-sref="tabs.categorytabs.electronic">
+                <p>Electronics</p>
+            </div>
+            <div class="col col-content col-25">
+                <img src="images/fashion.jpg" style="width:90%;border-radius: 50%" ui-sref="tabs.categorytabs.fashion">
+                <p>Fashion</p>
+            </div>
+            <div class="col col-content col-25">
+                <img src="images/living.jpg" style="width:90%;border-radius: 50%" ui-sref="tabs.categorytabs.live">
+                <p>live</p>
+            </div>
+            <div class="col col-content col-25">
+                <img src="images/kids.jpg" style="width:90%;border-radius: 50%" ui-sref="tabs.categorytabs.kids">
+                <p>Kids</p>
+            </div>
+        </div>
+        <ion-list class="list-inset">
+            <ion-item class="item-thumbnail-left" style="min-height: 70px;" ui-sref="tabs.offers">
+                <img src="images/offericon.jpg" style="height:50px;width: 51px;">
+                <h2>Offers only for you</h2>
+                <p>We have selected some products only for you </p>
+            </ion-item>
+        </ion-list>
+        <div class="newarrival">
+            <img src="images/newarrival.jpg" style="width:100%">
+            <div>
+                <p style="font-size: 16px;margin:10px 0 0 8px">New Arrival</p>
+                <p style="font-size: 14px;color: #929292;margin:0 0 0 10px;">summer’16 Collection</p>
+                <button class="button buttonshop">shop now</button>
+            </div>
+        </div>
+        <div class="row  colimg row-wrap">
+            <div class="col col-50" ng-repeat="item in data.productList" ng-click="todetail(item)" style="width:100%;height:100%;">
+                <img ng-src="{{item.url}}" ui-sref="detail"/>
+                <h2>{{item.h2}}</h2>
+                <p>{{item.p}}</p>
+                <button class="button button-icon ion-ios-heart assertive"></button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

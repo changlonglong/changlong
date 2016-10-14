@@ -1,0 +1,67 @@
+<ion-view title="Detail"  id="detail" hide-back-button="true">
+    <ion-nav-buttons side="right" style="position: relative">
+        <button class="button button-icon ion-android-cart light" ui-sref="tabs.cart"></button>
+        <div style="width:18px;height:18px;border-radius: 50%;background-color: red;color: #fff;position: absolute;top: 0;right: 0;text-align: center;line-height: 18px;font-size: 14px;font-weight: bold;z-index: 10" ng-if="getnumber()>0">{{getnumber()}}</div>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-arrow-left-c light" ng-click="back()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="background1">
+        <div class="row bigpic">
+            <div class="col"><img ng-src="{{product.url}}"/></div>
+        </div>
+        <div class="row smallpic">
+            <div class="col col-25"><img src="images/fashion/01.jpg"></div>
+            <div class="col co1-25"><img src="images/fashion/02.jpg"></div>
+            <div class="col co1-25"><img src="images/fashion/03.jpg"></div>
+            <div class="col co1-25"><img src="images/fashion/04.jpg"></div>
+        </div>
+        <div class="price">
+            <h3>{{product.h2}}</h3>
+            <p>{{product.p}}</p>
+            <button class="button button-clear">${{product.price}}</button>
+        </div>
+        <ion-list>
+            <ion-item class="details">
+                <h3>Details</h3>
+                <p>{{product.detail}}</p>
+                <ul>
+                    <li>{{product.tip1}}</li>
+                    <li>{{product.tip2}}</li>
+                    <li>{{product.tip3}}</li>
+                </ul>
+            </ion-item>
+            <ion-item>Similar Products</ion-item>
+            <ion-item>
+                <ion-scroll direction="x" style="width:100%;height:200px;overflow: hidden;">
+                    <div class="row similar">
+                        <div class="col" ng-repeat="item in similar" ng-click="todetail(item)" style="width:100%;height:100%;">
+                            <img ng-src="{{item.url}}" style="display: block;width:100%;height:100%">
+                            <h2>{{item.h2}}</h2>
+                            <p>${{item.price}}</p>
+                        </div>
+                    </div>
+                </ion-scroll>
+            </ion-item>
+            <ion-item class="item-icon-right">
+                Reviews<i class="icon ion-chevron-down reviews"></i>
+            </ion-item>
+            <ion-item class="item-avatar-left">
+                <img src="images/TB1_100x100.jpg">
+                <h2>Venkman</h2>
+                <p style="white-space: normal">Our fifth Avenue hotel offer an unbeatable location across from Bryant park and within walking distance form of time square</p>
+            </ion-item>
+            <ion-item class="item-avatar-left">
+                <img src="images/TB1_100x100.jpg">
+                <h2>Venkman</h2>
+                <p style="white-space: normal">Our fifth Avenue hotel offer an unbeatable location across from Bryant park and within walking distance form of time square</p>
+            </ion-item>
+        </ion-list>
+        </div>
+    </ion-content>
+    <div class="button-bar">
+        <a class="button" ui-sref="order" ng-click="toorder(product)">Buy now</a>
+        <a class="button" ng-click="addtocart(product)">Add to cart</a>
+    </div>
+</ion-view>

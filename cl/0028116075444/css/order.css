@@ -1,0 +1,11 @@
+.button-clear.button-clear{color: #fff;}
+#order{background-color: #f8f8f8}
+#order .price{color: #fc7a51;position: absolute;top:38px;left:189px}
+#order .quantity{position: absolute;right:0;bottom:2em;}
+#order .quantity button{color:#000;}
+#order .quantity input{display: inline;max-width: 20px;padding: 4px;}
+#order .item-thumbnail-left{position: relative}
+#order .aa{position: relative}
+#order .aa span{position: absolute;right: 20px;top: 30%}
+#order .placeorder{background: #fc7a51}
+

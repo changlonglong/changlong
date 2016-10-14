@@ -1,0 +1,18 @@
+<ion-view title="Electronic">
+    <ion-nav-buttons side="right" style="position: relative">
+        <button class="burron button-icon ion-android-cart light" ui-sref="tabs.cart"></button>
+        <div style="width:18px;height:18px;border-radius: 50%;background-color: red;color: #fff;position: absolute;top: 0;right: 0;text-align: center;line-height: 18px;font-size: 14px;font-weight: bold;z-index: 10" ng-if="getnumber()>0">{{getnumber()}}</div>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="left">
+        <button class="burron button-icon ion-arrow-left-c light" ui-sref="tabs.home"></button>
+    </ion-nav-buttons>
+    <ion-content id="electronic">
+        <div class="list list-inset card" ng-repeat="item in electronics" ng-click="todetail(item)">
+            <a class="item">
+                <h2>{{item.h2}}</h2>
+                <p>{{item.p}}</p>
+            </a>
+            <a class="item item-image"><img ng-src="{{item.url}}"></a>
+        </div>
+    </ion-content>
+</ion-view>

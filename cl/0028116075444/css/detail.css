@@ -1,0 +1,19 @@
+/*#detail{position:relative}*/
+#detail .bigpic img{width:100%;height:100%;display: block}
+#detail .smallpic img{width:100%;height:100%;display: block}
+#detail .background1{background-color: #f8f8f8;padding: 4%;}
+#detail .price{position: relative;background-color: #fff;padding: 5px}
+#detail .price h3{font-size: 5em;}
+#detail .price p{font-size: 4em;}
+#detail .price button{color:#f49685;position: absolute;bottom:1em;right:0.5em;}
+#detail .details{margin-top: 0.5em}
+#detail .details h3{font-size: 1.2em;font-weight: normal}
+#detail .details p{white-space: normal;font-size: 0.9em;margin:7px 0;}
+#detail .details ul{color: #c4c4c4}
+#detail .reviews{color:#f49685}
+#detail .button-bar{position: fixed;z-index: 3;bottom:0;}
+#detail .button-bar .button:first-child{background-color: #ef93bb;color: #fff;}
+#detail .button-bar .button:last-child{background-color: #f8b73d;color: #fff;}
+#detail .similar col{height:200px;}
+/*
+#detail .similar col img{width:100%;display: block;height:100%;}*/

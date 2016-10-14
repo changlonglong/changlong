@@ -1,0 +1,34 @@
+<ion-view title="Cart" id="order" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-arrow-left-c light" ng-click="back()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list list-inset ">
+            <ion-item class="item-thumbnail-left" ng-repeat="item in data">
+                <img ng-src="{{item.product.url}}">
+                <h2>{{item.product.h2}}</h2>
+                <p>{{item.product.p}}</p>
+                <p>save 20%</p>
+                <button class="button button-clear price">${{item.product.price}}</button>
+                <div class="quantity">
+                    <button class="button button-small button-icon ion-minus-round" ng-click="minus(item.product)"></button>
+                    <input type="text" value="1" style="font-size:20px" ng-model="item.number">
+                    <button class="button button-small button-icon ion-plus-round" ng-click="plus(item.product)"></button>
+                </div>
+            </ion-item>
+            <ion-item class="item-icon-right" ng-click="clear()">
+                <i class="icon ion-trash-a"></i>
+            </ion-item>
+        </div>
+        <div class="list list-inset card">
+            <ion-item class="aa">
+                Discount<span>-10%</span>
+            </ion-item>
+            <ion-item class="aa">
+                Total<span>${{gettotal()}}</span>
+            </ion-item>
+        </div>
+        <button class="button button-block button-assertive placeorder" ui-sref="shipping">Proceed to shipping</button>
+    </ion-content>
+
+</ion-view>

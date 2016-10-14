@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../lib/css/ionic.min.css">
+    <link rel="stylesheet" href="css/slidemenu.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/electronic.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/shipping.css">
+    <link rel="stylesheet" href="css/ordersent.css">
+    <link rel="stylesheet" href="css/placeorder.css">
+    <script src="../../lib/js/ionic.bundle.min.js"></script>
+    <script src="js/shopcart.js"></script>
+    <script src="js/myctrl.js"></script>
+    <script src="views/tabs/tabs.js"></script>
+    <script src="views/electronic/electronic.js"></script>
+    <script src="views/fashion/fashion.js"></script>
+    <script src="views/live/live.js"></script>
+    <script src="views/kids/kids.js"></script>
+    <script src="views/home/home.js"></script>
+    <script src="views/detail/detail.js"></script>
+    <script src="views/order/order.js"></script>
+    <script src="views/shipping/shipping.js"></script>
+    <script src="views/cart/cart.js"></script>
+    <script src="views/placeorder/placeorder.js"></script>
+    <script src="views/pay/pay.js"></script>
+</head>
+<body>
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar class="f49685" align-title="center">
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" ng-controller="slidemenu" id="slidemenu">
+        <ion-header-bar class="bar-calm">
+            <!--<h1 class="title">User</h1>-->
+        </ion-header-bar>
+        <ion-content>
+            <div class="list"  ng-if="!isshow">
+                <div class="item" style="text-align: center;font-size: 80px;color:#0c60ee">
+                    <i class="icon ion-android-cloud-outline"></i>
+                </div>
+                <form name="signin" novalidate>
+                    <div class="item item-input-inset">
+                        <div class="item-input-wrapper">
+                            <i class="icon  ion-ios-email-outline placeholder-icon"></i>
+                            <input type="text" placeholder="Email address" required ng-model="email"/>
+                        </div>
+                    </div>
+                    <div class="item item-input-inset">
+                        <div class="item-input-wrapper">
+                            <i class="icon ion-ios-unlocked-outline placeholder-icon"></i>
+                            <input type="password" placeholder="Password" required ng-model="password"/>
+                        </div>
+                    </div>
+                    <button class="button button-block  button-positive " ng-click="change()" ng-disabled="signin.$invalid">Log in</button>
+                    <button class="button button-block " ng-click="change2()">Register</button>
+                </form>
+            </div>
+            <div ng-if="isshow" class="page2">
+                <div class="list">
+                    <div class="item item-avatar-left">
+                        <img src="images/touxiang.jpg">
+                        <h2>Tom and jery</h2>
+                        <p></p>
+                    </div>
+                    <a class="item">mail</a>
+                    <a class="item">change skin</a>
+                    <a class="item">vip</a>
+                </div>
+                <div class="button-bar">
+                    <a class="button">setting</a>
+                    <a class="button" ng-click="change()">exit</a>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<ion-view title="Pay">
+    <ion-nav-buttons side="right">
+        <button class="burron button-icon ion-home light" ui-sref="tabs.home"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <h1 style="text-align: center;color:#fc7a51;font-size: 60px;margin-top: 10%">${{total}}</h1>
+        <div class="list list-inset">
+            <div class="item item-input">
+                <input type="text" name="username" placeholder="Uswename"/>
+            </div>
+            <div class="item item-input">
+                <input type="password" name="username" placeholder="Password"/>
+            </div>
+        </div>
+        <button class="button button-block" style="background-color: #fc7a51;color:#fff;" ui-sref="ordersent" ng-click="clear()">Ok</button>
+    </ion-content>
+</ion-view>

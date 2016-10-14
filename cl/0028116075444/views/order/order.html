@@ -1,0 +1,31 @@
+<ion-view title="Orders" id="order">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home light" ui-sref="tabs.home"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list list-inset ">
+            <ion-item class="item-thumbnail-left">
+                <img ng-src="{{data.url}}">
+                <h2>{{data.h2}}</h2>
+                <p>{{data.p}}</p>
+                <p>${{data.price}}</p>
+                <button class="button button-clear price">$350</button>
+                <div class="quantity">
+                    <button class="button button-small button-icon ion-minus-round" ng-click="minus()"></button>
+                    <input type="text" value="1" style="font-size:20px" ng-model="quantity">
+                    <button class="button button-small button-icon ion-plus-round" ng-click="plus()"></button>
+                </div>
+            </ion-item>
+        </div>
+        <div class="list list-inset card">
+            <ion-item class="aa">
+                Discount<span>-10%</span>
+            </ion-item>
+            <ion-item class="aa">
+                Total<span>${{quantity*data.price}}</span>
+            </ion-item>
+        </div>
+        <button class="button button-block button-assertive placeorder" ui-sref="shipping">Proceed to shipping</button>
+    </ion-content>
+
+</ion-view>

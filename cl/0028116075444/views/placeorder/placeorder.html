@@ -1,0 +1,13 @@
+<ion-view title="Place order" id="placeorder">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home light" ui-sref="tabs.home"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="row row-wrap">
+            <div class="col col-25" ng-repeat="item in icons" ng-class="{'chosed':item.ischosed}" ng-click="chose(item)" style="text-align: center;">
+                <img ng-src="{{item.url}}" style="width:100%">
+            </div>
+        </div>
+        <button class="button button-block" style="background-color: #fc7a51;color:#fff;" ui-sref="pay">pay</button>
+    </ion-content>
+</ion-view>
